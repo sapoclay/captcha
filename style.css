@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #361bbd;
+
+}
+.container {
+  position: absolute;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 15px 25px 25px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10em;
+}
+header {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+.input_field {
+  position: relative;
+  height: 45px;
+  margin-top: 15px;
+  width: 100%;
+}
+.refresh_button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: #0c9100;
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+.refresh_button:active {
+  transform: translateY(-50%) scale(0.98);
+}
+.input_field input,
+.button button {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+.input_field input {
+  padding: 0 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.captch_box input {
+  color: #6b6b6b;
+  font-size: 22px;
+  pointer-events: none;
+}
+.captch_input input:focus {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+.message {
+  font-size: 14px;
+  margin: 14px 0;
+  color: #826afb;
+  display: none;
+}
+.message.active {
+  display: block;
+  text-align: center;
+}
+.button button {
+  background: #320fe2;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+}
+.button button:active {
+  transform: scale(0.99);
+}
+.button.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+/*Título*/
+.titulo {
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  font: normal 38px / normal "Warnes", Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  white-space: pre;
+  text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgba(255, 0, 0),
+    0 0 30px rgba(255, 0, 0), 0 0 40px #727272, 0 0 70px #727272,
+    0 0 80px #4e4e4e, 0 0 100px #2b2b2b;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  width: 100%;
+
+}
+/* Estilo para el título cuando se le hace hover */
+.titulo:hover {
+  text-shadow: 0 0 10px rgb(73, 73, 73), 0 0 20px rgb(56, 56, 56),
+    0 0 30px rgb(48, 48, 48), 0 0 40px #5c5c5c, 0 0 70px #000000,
+    0 0 80px #000000, 0 0 100px #000000;
+}
+/* Texto del título */
+.titulo::after {
+  content: "Generador de CAPTCHA";
+}
+
+/* Estilo de deformación y desenfoque para el texto del captcha */
+.captch_box input {
+  transform: rotate(1deg) skew(20deg);
+  filter: blur(1px); /* Aplicar un efecto de desenfoque */
+  letter-spacing: 2px; /* Ajusta el espaciado entre letras según sea necesario */
+}
